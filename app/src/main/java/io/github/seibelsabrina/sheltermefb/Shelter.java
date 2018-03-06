@@ -1,10 +1,12 @@
 package io.github.seibelsabrina.sheltermefb;
 
+import java.io.Serializable;
+
 /**
  * Created by seibelsabrina on 2/28/18.
  */
 
-public class Shelter {
+public class Shelter implements Serializable {
     String shelterName;
     String capacity;
     String restrictions;

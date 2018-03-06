@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.seibelsabrina.sheltermefb.ShelterDetailViewActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textViewDetailShelterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="ShelterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDetailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="85dp"
+        android:text="Address"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailAddressInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDetailAddressInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailCapacity"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailAddress" />
+
+    <TextView
+        android:id="@+id/textViewDetailCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Capacity"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailCapacityInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailAddressInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailCapacityInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailLatitude"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailCapacity"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailCapacity" />
+
+    <TextView
+        android:id="@+id/textViewDetailLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Latitude"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailLatitudeInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailCapacityInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailLatitudeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailLongitude"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailLatitude"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLatitude" />
+
+    <TextView
+        android:id="@+id/textViewDetailLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Longitude"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailLongitudeInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLatitudeInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailLongitudeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailNotes"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailLongitude"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLongitude" />
+
+    <TextView
+        android:id="@+id/textViewDetailNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Notes"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailNotesInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLongitudeInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailNotesInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailPhoneNumber"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailNotes"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailNotes" />
+
+    <TextView
+        android:id="@+id/textViewDetailPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Phone Number"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailPhoneNumberInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailNotesInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailPhoneNumberInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailRestrictions"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailPhoneNumber" />
+
+    <TextView
+        android:id="@+id/textViewDetailRestrictions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Restrictions"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailRestrictionsInfo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailPhoneNumberInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailRestrictionsInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailRestrictions"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailRestrictions" />
+
+</android.support.constraint.ConstraintLayout>

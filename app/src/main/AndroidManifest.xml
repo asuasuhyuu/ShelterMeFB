@@ -21,7 +21,8 @@
         <activity android:name=".MainAdminActivity" />
         <activity android:name=".AddShelterActivity" />
         <activity android:name=".MainUserActivity" />
-        <activity android:name=".ShelterListActivity"></activity>
+        <activity android:name=".ShelterListActivity" />
+        <activity android:name=".ShelterDetailViewActivity"></activity>
     </application>
 
 </manifest>
