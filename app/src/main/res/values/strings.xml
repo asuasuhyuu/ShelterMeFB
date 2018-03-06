@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ShelterMeFB</string>
+    <string name="name">Name</string>
+    <string name="username">Username</string>
+    <string name="enter_full_name">Enter full name</string>
+    <string name="enter_username">Enter username</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+
+    <array name="modes">
+        <item>User</item>
+        <item>Admin</item>
+    </array>
+
+</resources>
