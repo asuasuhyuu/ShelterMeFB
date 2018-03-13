@@ -10,6 +10,7 @@ public class MainUserActivity extends AppCompatActivity {
 
     Button buttonUserShelterList;
     Button buttonMainUserLogout;
+    Button buttonUserShelterSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +19,7 @@ public class MainUserActivity extends AppCompatActivity {
 
         buttonUserShelterList = (Button) findViewById(R.id.buttonUserShelterList);
         buttonMainUserLogout = (Button) findViewById(R.id.buttonMainUserLogout);
-
+        buttonUserShelterSearch = (Button) findViewById(R.id.buttonUserShelterSearch);
         buttonUserShelterList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,6 +32,14 @@ public class MainUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainUserActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        buttonUserShelterSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainUserActivity.this, SearchActivity.class);
                 startActivity(intent);
             }
         });

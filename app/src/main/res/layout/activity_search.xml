@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.seibelsabrina.sheltermefb.SearchActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textViewSearchShelterGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="6dp"
+        android:text="Search shelter by gender:"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerSearchShelterGender"
+        app:layout_constraintStart_toStartOf="@+id/spinnerSearchShelterGender"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerSearchShelterGender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:entries="@array/gender"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSearchGender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSearchShelterGender" />
+
+    <TextView
+        android:id="@+id/textViewShelterSearchAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Search shelter by age range"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerSearchShelterAgeRange"
+        app:layout_constraintStart_toStartOf="@+id/spinnerSearchShelterAgeRange"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSearchGender" />
+
+    <Spinner
+        android:id="@+id/spinnerSearchShelterAgeRange"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:entries="@array/ageRange"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSearchAgeRange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewShelterSearchAge" />
+
+    <TextView
+        android:id="@+id/textViewSearchShelterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Search by Shelter Name"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSearchShelterName"
+        app:layout_constraintStart_toStartOf="@+id/buttonSearchAgeRange"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSearchAgeRange" />
+
+    <EditText
+        android:id="@+id/editTextSearchShelterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:ems="10"
+        android:hint="Enter Shelter Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSearchShelterName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSearchShelterName" />
+
+    <Button
+        android:id="@+id/buttonSearchGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="Search by gender"
+        app:layout_constraintBottom_toTopOf="@+id/textViewShelterSearchAge"
+        app:layout_constraintStart_toStartOf="@+id/textViewShelterSearchAge"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSearchShelterGender" />
+
+    <Button
+        android:id="@+id/buttonSearchAgeRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Search by age range"
+        app:layout_constraintBottom_toTopOf="@+id/textViewSearchShelterName"
+        app:layout_constraintStart_toStartOf="@+id/spinnerSearchShelterAgeRange"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerSearchShelterAgeRange" />
+
+    <Button
+        android:id="@+id/buttonSearchShelterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Search by shelter name"
+        app:layout_constraintBottom_toTopOf="@+id/listViewShelterSearch"
+        app:layout_constraintStart_toStartOf="@+id/editTextSearchShelterName"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSearchShelterName" />
+
+    <ListView
+        android:id="@+id/listViewShelterSearch"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSearchShelterName" />
+
+</android.support.constraint.ConstraintLayout>
