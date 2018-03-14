@@ -23,9 +23,9 @@
     <array name="ageRange">
         <item>Anyone</item>
         <item>Children</item>
-        <item>Family</item>
-        <item>Young Adults</item>
-        <item>Newborn</item>
+        <item>Families</item>
+        <item>Young adults</item>
+        <item>newborns</item>
     </array>
 
 

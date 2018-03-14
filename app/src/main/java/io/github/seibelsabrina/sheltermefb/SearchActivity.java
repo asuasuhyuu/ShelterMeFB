@@ -124,19 +124,11 @@ public class SearchActivity extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String ageRange = spinnerSearchShelterAgeRange.getSelectedItem().toString();
                 shelterList.clear();
-                if (ageRange.equals("Anyone")) {
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        Shelter shelter = snapshot.getValue(Shelter.class);
-                        // shelter.restrictions
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Shelter shelter = snapshot.getValue(Shelter.class);
+                    // shelter.restrictions
+                    if (shelter.getRestrictions().contains(ageRange)) {
                         shelterList.add(shelter);
-                    }
-                } else {
-                    for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                        Shelter shelter = snapshot.getValue(Shelter.class);
-                        // shelter.restrictions
-                        if (shelter.getRestrictions().contains(ageRange)) {
-                            shelterList.add(shelter);
-                        }
                     }
                 }
                 ShelterList adapter = new ShelterList(SearchActivity.this, shelterList);
@@ -156,6 +148,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String shelterName = editTextSearchShelterName.getText().toString().trim();
+                shelterList.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Shelter shelter = snapshot.getValue(Shelter.class);
                     // shelter.restrictions
