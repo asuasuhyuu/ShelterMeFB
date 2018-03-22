@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ShelterMeFB.iml" filepath="$PROJECT_DIR$/ShelterMeFB.iml" />
+      <module fileurl="file://C:\Users\askah\Documents\GT Spring 2018\cs2340\ShelterMeFB\ShelterMeFB.iml" filepath="C:\Users\askah\Documents\GT Spring 2018\cs2340\ShelterMeFB\ShelterMeFB.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\askah\Documents\GT Spring 2018\cs2340\ShelterMeFB\app\app.iml" filepath="C:\Users\askah\Documents\GT Spring 2018\cs2340\ShelterMeFB\app\app.iml" />
     </modules>
   </component>
 </project>
