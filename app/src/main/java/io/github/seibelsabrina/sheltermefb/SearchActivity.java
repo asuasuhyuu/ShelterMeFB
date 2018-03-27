@@ -37,6 +37,9 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+        Bundle bundle = getIntent().getExtras();
+        final Person person = (Person) bundle.getSerializable("person");
+
 
         databaseShelter = FirebaseDatabase.getInstance().getReference("shelters");
 
@@ -78,6 +81,7 @@ public class SearchActivity extends AppCompatActivity {
                 Shelter s = (Shelter) listViewShelterSearch.getItemAtPosition(i);
                 Intent intent = new Intent(SearchActivity.this, ShelterDetailViewActivity.class);
                 intent.putExtra("shelter", s);
+                intent.putExtra("person", person);
                 startActivity(intent);
             }
         });

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -84,11 +85,14 @@ public class AddShelterActivity extends AppCompatActivity {
 
             Float numlongitude = Float.parseFloat(longitude);
             Float numlatitude =  Float.parseFloat(latitude);
-            String id = databaseShelter.push().getKey();
+            //String id = databaseShelter.push().getKey();
+
+
+            String key = shelterName;
             Shelter shelter = new Shelter(shelterName, capacity, restrictions,
                     numlongitude, numlatitude, address, shelterNotes, phoneNumber);
 
-            databaseShelter.child(id).setValue(shelter);
+            databaseShelter.child(key).setValue(shelter);
             Toast.makeText(this, "Shelter Added", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(AddShelterActivity.this, MainAdminActivity.class);
             startActivity(intent);

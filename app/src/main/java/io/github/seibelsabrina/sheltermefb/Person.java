@@ -1,31 +1,31 @@
 package io.github.seibelsabrina.sheltermefb;
 
+import java.io.Serializable;
+
 /**
  * Created by seibelsabrina on 2/24/18.
  */
 
-public class Person {
-    String personId;
+public class Person implements Serializable {
     String name;
     String username;
     String password;
     String mode;
+    String reservation;
+    Integer numReservations;
 
 
     public Person() {
 
     }
 
-    public Person(String personId, String name, String username, String password, String mode) {
-        this.personId = personId;
+    public Person(String name, String username, String password, String mode, String reservation, Integer numReservations) {
         this.name = name;
         this.username = username;
         this.password = password;
         this.mode = mode;
-    }
-
-    public String getPersonId() {
-        return personId;
+        this.reservation = reservation;
+        this.numReservations = numReservations;
     }
 
     public String getName() {
@@ -42,5 +42,21 @@ public class Person {
 
     public String getMode() {
         return mode;
+    }
+
+    public String getReservation() {
+        return reservation;
+    }
+
+    public void setReservation(String reservation) {
+        this.reservation = reservation;
+    }
+
+    public Integer getNumReservations() {
+        return numReservations;
+    }
+
+    public void setNumReservations(Integer numReservations) {
+        this.numReservations = numReservations;
     }
 }

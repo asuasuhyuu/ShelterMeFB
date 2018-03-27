@@ -24,7 +24,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="85dp"
         android:text="Address"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailAddressInfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,10 +31,8 @@
         android:id="@+id/textViewDetailAddressInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
         android:layout_marginStart="35dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailCapacity"
         app:layout_constraintStart_toStartOf="@+id/textViewDetailAddress"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailAddress" />
 
@@ -44,31 +41,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
         android:text="Capacity"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailCapacityInfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailAddressInfo" />
 
     <TextView
         android:id="@+id/textViewDetailCapacityInfo"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="14dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="13dp"
         android:layout_marginStart="35dp"
+        android:layout_marginTop="19dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/textViewDetailLatitude"
         app:layout_constraintStart_toStartOf="@+id/textViewDetailCapacity"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDetailCapacity" />
+        app:layout_constraintTop_toTopOf="@+id/textViewDetailCapacity" />
 
     <TextView
         android:id="@+id/textViewDetailLatitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="41dp"
         android:text="Latitude"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailLatitudeInfo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDetailCapacityInfo" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailCapacity" />
 
     <TextView
         android:id="@+id/textViewDetailLatitudeInfo"
@@ -76,7 +74,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailLongitude"
         app:layout_constraintStart_toStartOf="@+id/textViewDetailLatitude"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailLatitude" />
 
@@ -85,19 +82,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
         android:text="Longitude"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailLongitudeInfo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLatitudeInfo" />
+        app:layout_constraintTop_toTopOf="@+id/textViewDetailLatitudeInfo" />
 
     <TextView
         android:id="@+id/textViewDetailLongitudeInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
         android:layout_marginStart="35dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailNotes"
         app:layout_constraintStart_toStartOf="@+id/textViewDetailLongitude"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailLongitude" />
 
@@ -106,8 +101,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
         android:text="Notes"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailNotesInfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailLongitudeInfo" />
 
@@ -115,10 +110,8 @@
         android:id="@+id/textViewDetailNotesInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
         android:layout_marginStart="35dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailPhoneNumber"
         app:layout_constraintStart_toStartOf="@+id/textViewDetailNotes"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailNotes" />
 
@@ -127,8 +120,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
         android:text="Phone Number"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailPhoneNumberInfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailNotesInfo" />
 
@@ -136,10 +129,8 @@
         android:id="@+id/textViewDetailPhoneNumberInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
         android:layout_marginStart="35dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailRestrictions"
         app:layout_constraintStart_toStartOf="@+id/textViewDetailPhoneNumber"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailPhoneNumber" />
 
@@ -147,21 +138,31 @@
         android:id="@+id/textViewDetailRestrictions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
         android:text="Restrictions"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDetailRestrictionsInfo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDetailPhoneNumberInfo" />
+        app:layout_constraintTop_toTopOf="@+id/textViewDetailPhoneNumberInfo" />
 
     <TextView
         android:id="@+id/textViewDetailRestrictionsInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
         android:layout_marginStart="35dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textViewDetailRestrictions"
         app:layout_constraintTop_toBottomOf="@+id/textViewDetailRestrictions" />
+
+    <Button
+        android:id="@+id/buttonDetailBookRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="221dp"
+        android:layout_marginEnd="48dp"
+        android:text="Book Room"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

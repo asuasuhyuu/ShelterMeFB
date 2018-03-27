@@ -67,8 +67,8 @@ public class RegisterScreenActivity extends AppCompatActivity {
         String mode = spinnerRegisterMode.getSelectedItem().toString();
 
         if ((!TextUtils.isEmpty(name)) && (!TextUtils.isEmpty(username)) && (!TextUtils.isEmpty(password))) {
-            String id = databasePerson.push().getKey();
-            Person person = new Person(id, name, username, password, mode);
+            String id = username;
+            Person person = new Person(name, username, password, mode, "", 0);
             databasePerson.child(id).setValue(person);
             Toast.makeText(this, "Account created", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(RegisterScreenActivity.this, MainActivity.class);
@@ -77,5 +77,4 @@ public class RegisterScreenActivity extends AppCompatActivity {
             Toast.makeText(this, "Please fill out all fields", Toast.LENGTH_LONG).show();
         }
     }
-
 }

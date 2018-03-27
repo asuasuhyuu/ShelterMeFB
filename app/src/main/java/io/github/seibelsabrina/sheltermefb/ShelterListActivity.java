@@ -30,6 +30,9 @@ public class ShelterListActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shelter_list);
 
+        Bundle bundle = getIntent().getExtras();
+        final Person person = (Person) bundle.getSerializable("person");
+
         databaseShelters = FirebaseDatabase.getInstance().getReference("shelters");
         listViewShelters = (ListView) findViewById(R.id.listViewShelters);
         shelterList = new ArrayList<>();
@@ -40,6 +43,7 @@ public class ShelterListActivity extends AppCompatActivity {
                 Shelter s = (Shelter) listViewShelters.getItemAtPosition(i);
                 Intent intent = new Intent(ShelterListActivity.this, ShelterDetailViewActivity.class);
                 intent.putExtra("shelter", s);
+                intent.putExtra("person", person);
                 startActivity(intent);
             }
         });

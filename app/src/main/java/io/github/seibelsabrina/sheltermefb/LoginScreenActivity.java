@@ -16,6 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class LoginScreenActivity extends AppCompatActivity {
@@ -39,33 +40,33 @@ public class LoginScreenActivity extends AppCompatActivity {
         buttonLoginScreenCancel = (Button) findViewById(R.id.buttonLoginScreenCancel);
 
 
-                buttonLoginScreenLogin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        databasePeople.addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(DataSnapshot dataSnapshot) {
-                                boolean isFound = false;
-                                for (DataSnapshot personSnapshot: dataSnapshot.getChildren()) {
-                                    if (!isFound) {
-                                        Person person = personSnapshot.getValue(Person.class);
-                                        if (checkValidCredentials(person)) {
-                                            Toast.makeText(LoginScreenActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
-                                            isFound = true;
-                                        }
-                                    }
-                                }
-                                Toast.makeText(LoginScreenActivity.this, "Invalid Login", Toast.LENGTH_LONG).show();
-
+        buttonLoginScreenLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            databasePeople.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    boolean isFound = false;
+                    for (DataSnapshot personSnapshot: dataSnapshot.getChildren()) {
+                        if (!isFound) {
+                            Person person = personSnapshot.getValue(Person.class);
+                            if (checkValidCredentials(person)) {
+                                Toast.makeText(LoginScreenActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
+                                isFound = true;
                             }
-
-                            @Override
-                            public void onCancelled(DatabaseError databaseError) {
-
-                            }
-                        });
+                        }
                     }
-                });
+                    Toast.makeText(LoginScreenActivity.this, "Invalid Login", Toast.LENGTH_LONG).show();
+
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
+            }
+        });
 
         buttonLoginScreenCancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,12 +86,14 @@ public class LoginScreenActivity extends AppCompatActivity {
                 if (person.getMode().equals("Admin")) {
                     //Toast.makeText(LoginScreenActivity.this, "SUCCESS ADMIN", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(LoginScreenActivity.this, MainAdminActivity.class);
+                    intent.putExtra("person", person);
                     startActivity(intent);
                     return true;
 
                 } else {
                     Toast.makeText(LoginScreenActivity.this, "success user", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(LoginScreenActivity.this, MainUserActivity.class);
+                    intent.putExtra("person", person);
                     startActivity(intent);
                     return true;
                 }

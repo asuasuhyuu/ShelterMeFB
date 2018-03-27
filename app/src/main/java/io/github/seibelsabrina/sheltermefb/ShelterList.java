@@ -46,7 +46,5 @@ public class ShelterList extends ArrayAdapter<Shelter> {
         textViewName.setText(shelter.getShelterName());
 
         return listViewItem;
-
-
     }
 }
