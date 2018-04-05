@@ -10,13 +10,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * Created by seibelsabrina on 2/28/18.
  */
 
-public class ShelterList extends ArrayAdapter<Shelter> {
+public class ShelterList extends ArrayAdapter<Shelter> implements Serializable {
     private Activity context;
     private List<Shelter> shelterList;
 

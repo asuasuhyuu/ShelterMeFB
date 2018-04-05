@@ -22,6 +22,7 @@ public class MainUserActivity extends AppCompatActivity {
     Button buttonMainUserLogout;
     Button buttonUserShelterSearch;
     Button buttonUserCancelReservation;
+    Button buttonMainUserMap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class MainUserActivity extends AppCompatActivity {
         buttonMainUserLogout = (Button) findViewById(R.id.buttonMainUserLogout);
         buttonUserShelterSearch = (Button) findViewById(R.id.buttonUserShelterSearch);
         buttonUserCancelReservation = (Button) findViewById(R.id.buttonUserCancelReservation);
+        buttonMainUserMap = (Button) findViewById(R.id.buttonMainUserMap);
 
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -98,7 +100,18 @@ public class MainUserActivity extends AppCompatActivity {
                 alert.show();
             }
         });
+
+        buttonMainUserMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainUserActivity.this, MapSearchActivity.class);
+                intent.putExtra("person", person);
+                startActivity(intent);
+            }
+        });
     }
+
+
 
 
 }

@@ -3,11 +3,10 @@ package io.github.seibelsabrina.sheltermefb;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Spinner;
 
 import com.google.firebase.database.DataSnapshot;
@@ -16,78 +15,64 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchActivity extends AppCompatActivity {
+public class MapSearchActivity extends AppCompatActivity {
 
-    Spinner spinnerSearchShelterGender;
-    Spinner spinnerSearchShelterAgeRange;
-    EditText editTextSearchShelterName;
-    Button buttonSearchGender;
-    Button buttonSearchAgeRange;
-    Button buttonSearchShelterName;
-    ListView listViewShelterSearch;
-    List<Shelter> shelterList;
+    Spinner spinnerMapGender;
+    Spinner spinnerMapAge;
+    EditText editTextMapName;
+    Button buttonMapName;
+    Button buttonMapGender;
+    Button buttonMapAge;
 
     DatabaseReference databaseShelter;
+
+    List<Shelter> shelterList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
+        setContentView(R.layout.activity_map_search);
 
-        Bundle bundle = getIntent().getExtras();
-        final Person person = (Person) bundle.getSerializable("person");
 
 
         databaseShelter = FirebaseDatabase.getInstance().getReference("shelters");
 
-        spinnerSearchShelterGender = (Spinner) findViewById(R.id.spinnerSearchShelterGender);
-        spinnerSearchShelterAgeRange = (Spinner) findViewById(R.id.spinnerSearchShelterAgeRange);
-        editTextSearchShelterName = (EditText) findViewById(R.id.editTextSearchShelterName);
-        buttonSearchGender = (Button) findViewById(R.id.buttonSearchGender);
-        buttonSearchAgeRange = (Button) findViewById(R.id.buttonSearchAgeRange);
-        buttonSearchShelterName = (Button) findViewById(R.id.buttonSearchShelterName);
-        listViewShelterSearch = (ListView) findViewById(R.id.listViewShelterSearch);
+        spinnerMapGender = (Spinner) findViewById(R.id.spinnerMapGender);
+        spinnerMapAge = (Spinner) findViewById(R.id.spinnerMapAge);
+        editTextMapName = (EditText) findViewById(R.id.editTextMapName);
+        buttonMapName = (Button) findViewById(R.id.buttonMapName);
+        buttonMapGender = (Button) findViewById(R.id.buttonMapGender);
+        buttonMapAge = (Button) findViewById(R.id.buttonMapAge);
+
+        shelterList = new ArrayList<Shelter>();
 
 
-        shelterList = new ArrayList<>();
-
-        buttonSearchGender.setOnClickListener(new View.OnClickListener() {
+        buttonMapGender.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 searchGender();
             }
         });
 
-        buttonSearchAgeRange.setOnClickListener(new View.OnClickListener() {
+        buttonMapAge.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 searchAgeRange();
             }
         });
 
-        buttonSearchShelterName.setOnClickListener(new View.OnClickListener() {
+        buttonMapName.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 searchShelterName();
             }
         });
 
-        listViewShelterSearch.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Shelter s = (Shelter) listViewShelterSearch.getItemAtPosition(i);
-                Intent intent = new Intent(SearchActivity.this, ShelterDetailViewActivity.class);
-                intent.putExtra("shelter", s);
-                intent.putExtra("person", person);
-                startActivity(intent);
-            }
-        });
-
     }
-
 
 
     private void searchGender() {
@@ -95,7 +80,7 @@ public class SearchActivity extends AppCompatActivity {
         databaseShelter.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String gender = spinnerSearchShelterGender.getSelectedItem().toString();
+                String gender = spinnerMapGender.getSelectedItem().toString();
                 String gender2;
                 if (gender.equals("Female")) {
                     gender2 = "Women";
@@ -111,8 +96,9 @@ public class SearchActivity extends AppCompatActivity {
                         shelterList.add(shelter);
                     }
                 }
-                ShelterList adapter = new ShelterList(SearchActivity.this, shelterList);
-                listViewShelterSearch.setAdapter(adapter);
+                Intent intent = new Intent(MapSearchActivity.this, MapsActivity.class);
+                intent.putExtra("ShelterList", (Serializable) shelterList);
+                startActivity(intent);
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -125,7 +111,7 @@ public class SearchActivity extends AppCompatActivity {
         databaseShelter.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String ageRange = spinnerSearchShelterAgeRange.getSelectedItem().toString();
+                String ageRange = spinnerMapAge.getSelectedItem().toString();
                 shelterList.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Shelter shelter = snapshot.getValue(Shelter.class);
@@ -134,8 +120,9 @@ public class SearchActivity extends AppCompatActivity {
                         shelterList.add(shelter);
                     }
                 }
-                ShelterList adapter = new ShelterList(SearchActivity.this, shelterList);
-                listViewShelterSearch.setAdapter(adapter);
+                Intent intent = new Intent(MapSearchActivity.this, MapsActivity.class);
+                intent.putExtra("ShelterList", (Serializable) shelterList);
+                startActivity(intent);
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -150,7 +137,7 @@ public class SearchActivity extends AppCompatActivity {
         databaseShelter.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                String shelterName = editTextSearchShelterName.getText().toString().trim();
+                String shelterName = editTextMapName.getText().toString().trim();
                 shelterList.clear();
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     Shelter shelter = snapshot.getValue(Shelter.class);
@@ -160,8 +147,9 @@ public class SearchActivity extends AppCompatActivity {
                         shelterList.add(shelter);
                     }
                 }
-                ShelterList adapter = new ShelterList(SearchActivity.this, shelterList);
-                listViewShelterSearch.setAdapter(adapter);
+                Intent intent = new Intent(MapSearchActivity.this, MapsActivity.class);
+                intent.putExtra("ShelterList", (Serializable) shelterList);
+                startActivity(intent);
             }
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -170,3 +158,5 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 }
+
+

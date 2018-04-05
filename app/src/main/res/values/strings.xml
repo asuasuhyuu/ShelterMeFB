@@ -27,6 +27,7 @@
         <item>Young adults</item>
         <item>newborns</item>
     </array>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>
