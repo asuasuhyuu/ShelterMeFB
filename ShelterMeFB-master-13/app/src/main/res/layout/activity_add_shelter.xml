@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.seibelsabrina.sheltermefb.AddShelterActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textViewShelterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:text="Shelter Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextShelterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter Shelter Name"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/textViewCapactity"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewCapactity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Capacity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextShelterName" />
+
+    <EditText
+        android:id="@+id/editTextCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Enter Capacity"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLongitude"
+        app:layout_constraintStart_toStartOf="@+id/textViewLongitude" />
+
+    <TextView
+        android:id="@+id/textViewLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginStart="16dp"
+        android:text="Longitude"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextLongitude"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Enter Longitude"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/textViewLatitude"
+        app:layout_constraintStart_toStartOf="@+id/textViewLatitude" />
+
+    <TextView
+        android:id="@+id/textViewLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginStart="16dp"
+        android:text="Latitude"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextLatitude"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Enter Latitude"
+        android:inputType="numberSigned|numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailAddress"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailAddress" />
+
+    <TextView
+        android:id="@+id/textViewDetailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginStart="16dp"
+        android:text="Address"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextAddress"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Enter Address"
+        android:inputType="textPostalAddress"
+        app:layout_constraintBottom_toTopOf="@+id/textViewPhoneNumber"
+        app:layout_constraintStart_toStartOf="@+id/textViewPhoneNumber" />
+
+    <TextView
+        android:id="@+id/textViewPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginStart="16dp"
+        android:text="Phone Number"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextPhoneNumber"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Enter Shelter's Phone #"
+        android:inputType="phone"
+        app:layout_constraintBottom_toTopOf="@+id/textViewShelterNotes"
+        app:layout_constraintStart_toStartOf="@+id/textViewShelterNotes" />
+
+    <TextView
+        android:id="@+id/textViewShelterNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="45dp"
+        android:layout_marginStart="16dp"
+        android:text="Special Notes"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextShelterNotes"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextShelterNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Enter any special notes"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/textViewRestrictions"
+        app:layout_constraintStart_toStartOf="@+id/textViewRestrictions" />
+
+    <Button
+        android:id="@+id/buttonAddShelterCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:text="Cancel"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextAddress"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonAddShelterAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:text="Add"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextLongitude"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewRestrictions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Restrictions"
+        app:layout_constraintBottom_toTopOf="@+id/editTextRestrictions"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextRestrictions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ems="10"
+        android:hint="Enter any restrictions"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textViewRestrictions" />
+</android.support.constraint.ConstraintLayout>
