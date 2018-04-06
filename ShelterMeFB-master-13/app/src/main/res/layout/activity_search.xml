@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.seibelsabrina.sheltermefb.SearchActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/listViewShelterSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewSearchShelterGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search shelter by gender:"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="3dp" />
+
+            <Spinner
+                android:id="@+id/spinnerSearchShelterGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/gender"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="22dp" />
+
+            <Button
+                android:id="@+id/buttonSearchGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search by gender"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="46dp" />
+
+            <TextView
+                android:id="@+id/textViewShelterSearchAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search shelter by age range"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="94dp" />
+
+            <Spinner
+                android:id="@+id/spinnerSearchShelterAgeRange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/ageRange"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="113dp" />
+
+            <Button
+                android:id="@+id/buttonSearchAgeRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search by age range"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="137dp" />
+
+            <TextView
+                android:id="@+id/textViewSearchShelterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search by Shelter Name"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="185dp" />
+
+            <EditText
+                android:id="@+id/editTextSearchShelterName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Shelter Name"
+                android:inputType="textPersonName"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="204dp" />
+
+            <Button
+                android:id="@+id/buttonSearchShelterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search by shelter name"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="250dp" />
+
+            <TextView
+                android:id="@+id/textViewSearchCharacteristic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search by Characteristics" />
+
+            <EditText
+                android:id="@+id/editTextSearchCharacteristic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Characteristic"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/buttonSearchCharacteristic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search by characteristic" />
+
+            <TextView
+                android:id="@+id/textViewSearchAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Search by Address" />
+
+            <EditText
+                android:id="@+id/editTextSearchAddress"
+                android:layout_width="394dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Enter Address or Partial Address"
+                android:inputType="text" />
+
+            <Button
+                android:id="@+id/buttonSearchAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search by Address" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ListView
+        android:id="@+id/listViewShelterSearch"
+        android:layout_width="0dp"
+        android:layout_height="178dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+    </ListView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.seibelsabrina.sheltermefb.ShelterDetailViewActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/textViewDetailShelterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="ShelterName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDetailAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="85dp"
+        android:text="Address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDetailAddressInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailAddress" />
+
+    <TextView
+        android:id="@+id/textViewDetailCapacity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:text="Capacity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailAddressInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailCapacityInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginBottom="13dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="19dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewDetailLatitude"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailCapacity"
+        app:layout_constraintTop_toTopOf="@+id/textViewDetailCapacity" />
+
+    <TextView
+        android:id="@+id/textViewDetailLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="41dp"
+        android:text="Latitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailCapacity" />
+
+    <TextView
+        android:id="@+id/textViewDetailLatitudeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailLatitude"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLatitude" />
+
+    <TextView
+        android:id="@+id/textViewDetailLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:text="Longitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewDetailLatitudeInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailLongitudeInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailLongitude"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLongitude" />
+
+    <TextView
+        android:id="@+id/textViewDetailNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        android:text="Notes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailLongitudeInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailNotesInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailNotes"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailNotes" />
+
+    <TextView
+        android:id="@+id/textViewDetailPhoneNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:text="Phone Number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailNotesInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailPhoneNumberInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailPhoneNumber"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailPhoneNumber" />
+
+    <TextView
+        android:id="@+id/textViewDetailRestrictions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="54dp"
+        android:text="Restrictions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewDetailPhoneNumberInfo" />
+
+    <TextView
+        android:id="@+id/textViewDetailRestrictionsInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/textViewDetailRestrictions"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDetailRestrictions" />
+
+    <Button
+        android:id="@+id/buttonDetailBookRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="221dp"
+        android:layout_marginEnd="48dp"
+        android:text="Book Room"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

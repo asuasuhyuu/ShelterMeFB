@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ShelterMeFB</string>
+    <string name="name">Name</string>
+    <string name="username">Username</string>
+    <string name="enter_full_name">Enter full name</string>
+    <string name="enter_username">Enter username</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="see_shelter_list">See Shelter List</string>
+    <string name="search_shelters">Search shelters</string>
+
+    <array name="modes">
+        <item>User</item>
+        <item>Admin</item>
+    </array>
+
+    <array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+
+    <array name="ageRange">
+        <item>Anyone</item>
+        <item>Children</item>
+        <item>Families</item>
+        <item>Young adults</item>
+        <item>newborns</item>
+    </array>
+    <string name="title_activity_maps">Map</string>
+
+
+</resources>
